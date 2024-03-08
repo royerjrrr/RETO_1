@@ -11,16 +11,20 @@ public  class SchoolGrandingSystem extends GrandingSystem {
     private String nombre, genero, materia;
 
 
-;
+    public SchoolGrandingSystem() {
+    }
 
-
-    public SchoolGrandingSystem(String nombre,String genero, String materia, double nota ) {
+    public SchoolGrandingSystem(String nombre, String genero, String materia, double nota ) {
         super();
         this.nombre = nombre;
         this.materia = materia;
         this.genero = genero;
         this.nota = nota;
     }
+
+    public SchoolGrandingSystem(List<SchoolGrandingSystem> exams) {
+    }
+
 
     public double getNota() {
         return nota;
@@ -46,7 +50,7 @@ public  class SchoolGrandingSystem extends GrandingSystem {
     int alamnoData = alumno.size();
     int conDesempeño = 0;
     for (SchoolGrandingSystem exam : alumno){
-    if (exam.getNota() >= 6.0){
+    if (exam.getNota() >= 60.0){
         conDesempeño++;
     }
     }

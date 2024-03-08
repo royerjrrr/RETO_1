@@ -9,7 +9,7 @@ import java.util.List;
 public abstract class GrandingSystem {
     public List<SchoolGrandingSystem> alumno = new ArrayList<>();
 
-    public GrandingSystem(List<SchoolGrandingSystem> alumno) {
+    public GrandingSystem() {
         this.alumno = alumno;
     }
 

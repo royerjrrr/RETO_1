@@ -3,20 +3,37 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package reto.pkg1;
+import com.sun.tools.javac.Main;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Reto1 {
-/*
-    public  static HashMap<Integer, SchoolGrandingSystem> listaEstudiante = new HashMap<Integer, SchoolGrandingSystem>();
-    public  static Scanner sc = new Scanner(System.in);
-    public static SchoolGrandingSystem alumno = new SchoolGrandingSystem();
-*/
+
+
+    /*
+        public  static HashMap<Integer, SchoolGrandingSystem> listaEstudiante = new HashMap<Integer, SchoolGrandingSystem>();
+        public  static Scanner sc = new Scanner(System.in);
+        public static SchoolGrandingSystem alumno = new SchoolGrandingSystem();
+    */
     public static void main(String[] args) {
     List<SchoolGrandingSystem> exams = new ArrayList<>();
-    exams.add(new SchoolGrandingSystem("Royer", "f", "Biologia", 90));
+        exams.add(new SchoolGrandingSystem("Royer", "m", "Biologia", 90.0));
+        exams.add(new SchoolGrandingSystem("oas", "f", "Matemaicas", 50.4));
+        exams.add(new SchoolGrandingSystem("gema", "f", "Biologia", 40.3));
+        exams.add(new SchoolGrandingSystem("juan", "f", "Biologia", 20.4));
+
+        SchoolGrandingSystem analizar = new SchoolGrandingSystem(exams);
+
+
+
+        System.out.println("Mejor porcentaje " + analizar.stack1() + "%");
+        System.out.println("Examenes regulares " + analizar.stack2());
+        System.out.println("Mejor materia femenino " + analizar.stack3());
+        System.out.println("Mejor estudiante biologia " + analizar.stack4());
+
 
     }
 
