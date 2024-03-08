@@ -3,19 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package reto.pkg1;
+import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Scanner;
+import java.util.List;
+import java.util.Map;
+
 public class Reto1 {
-
-    public  static HashMap<Integer, estudiante> listaEstudiante = new HashMap<Integer, estudiante>();
+/*
+    public  static HashMap<Integer, SchoolGrandingSystem> listaEstudiante = new HashMap<Integer, SchoolGrandingSystem>();
     public  static Scanner sc = new Scanner(System.in);
-    public static estudiante alumno = new estudiante();
-
+    public static SchoolGrandingSystem alumno = new SchoolGrandingSystem();
+*/
     public static void main(String[] args) {
-        elegirEst();
+    List<SchoolGrandingSystem> exams = new ArrayList<>();
+    exams.add(new SchoolGrandingSystem("Royer", "f", "Biologia", 90));
 
     }
-    private static HashMap<Integer, estudiante> elegirEst() {
+
+   /*
+    private static HashMap<Integer, SchoolGrandingSystem> elegirEst() {
         boolean exit = false;
         while (!exit) {
             System.out.println("Reto 1");
@@ -106,9 +112,11 @@ public class Reto1 {
 
 
    private static void imprimirHashmap(){
-        for (estudiante alumno: listaEstudiante.values()){
+        for (SchoolGrandingSystem alumno: listaEstudiante.values()){
             System.out.println(alumno);
         }
    }
+
+    */
 
 }
