@@ -3,23 +3,48 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package reto.pkg1;
-import com.sun.tools.javac.Main;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import modelo.GrandingSystem;
+import modelo.SchoolGrandingSystem;
+
+import  java.util.Locale;
+import java.util.Scanner;
 
 public class Reto1 {
 
 
-    /*
-        public  static HashMap<Integer, SchoolGrandingSystem> listaEstudiante = new HashMap<Integer, SchoolGrandingSystem>();
-        public  static Scanner sc = new Scanner(System.in);
-        public static SchoolGrandingSystem alumno = new SchoolGrandingSystem();
-    */
+
     public static void main(String[] args) {
-    List<SchoolGrandingSystem> exams = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+        sc.useLocale(Locale.US);
+        int cantidad = 18;
+        SchoolGrandingSystem[] listaEstudiante = new SchoolGrandingSystem[cantidad];
+
+        for (int i = 0; i < 18; i++) {
+            double idEstudiante = sc.nextDouble();
+            double idGenero = sc.nextDouble();
+            double idMateria = sc.nextDouble();
+            double nota = sc.nextDouble();
+            listaEstudiante[i] = new SchoolGrandingSystem(idEstudiante, idGenero, idMateria, nota);
+        }
+        for (SchoolGrandingSystem d : listaEstudiante){
+            System.out.println(d);
+        }
+
+        SchoolGrandingSystem metodos = new SchoolGrandingSystem();
+        //Arreglar las preguntas
+        //Intete pasarlo a un metodo pero parecer no sirve
+        System.out.println("Primera pregunta " + String.format("%.2f", metodos.stack1() ));
+        System.out.println("Segunda " + metodos.stack2());
+        System.out.println("Segunda " + metodos.stack3());
+        System.out.println("Segunda " + metodos.stack4());
+
+    }
+}
+
+
+        /*
+        List<SchoolGrandingSystem> exams = new ArrayList<>();
         exams.add(new SchoolGrandingSystem("Royer", "m", "Biologia", 90.0));
         exams.add(new SchoolGrandingSystem("oas", "f", "Matemaicas", 50.4));
         exams.add(new SchoolGrandingSystem("gema", "f", "Biologia", 40.3));
@@ -36,7 +61,7 @@ public class Reto1 {
 
 
     }
-
+*/
    /*
     private static HashMap<Integer, SchoolGrandingSystem> elegirEst() {
         boolean exit = false;
@@ -136,4 +161,4 @@ public class Reto1 {
 
     */
 
-}
+
