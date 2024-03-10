@@ -25,18 +25,18 @@ private centralView views;
             public void actionPerformed(ActionEvent e) {
                try {
                 String[] filas = views.txtDatos.getText().split("\\n");
-                //SchoolGrandingSystem[] list = new SchoolGrandingSystem[filas.length];
+               
                 List<SchoolGrandingSystem> list = new ArrayList<>(filas.length);
 
                 for (int i = 0; i < filas.length; i++) {
                     String[] datos = filas[i].split("\\s+"); 
 
                     double idStudent = Double.parseDouble(datos[0]);
-                    double codegenre = Double.parseDouble(datos[1]);
-                    double codematt = Double.parseDouble(datos[2]);
+                    double idGenre = Double.parseDouble(datos[1]);
+                    double idMatter = Double.parseDouble(datos[2]);
                     double notas = Double.parseDouble(datos[3]);
                     
-                    list.add(new SchoolGrandingSystem(idStudent, codegenre, codematt, notas));
+                    list.add(new SchoolGrandingSystem(idStudent, idGenre, idMatter, notas));
                 }
 
                 views.lblPorcentage.setText(String.format("%.2f", reiw.stack1((ArrayList<SchoolGrandingSystem>) list)));
@@ -46,7 +46,7 @@ private centralView views;
     
             } catch (NumberFormatException ex) {
                    System.out.println("error");
-               //views.displayErrorMessage("Por favor, ingresa un número válido para la dimensión de la lista.");
+             
             }
         }
         

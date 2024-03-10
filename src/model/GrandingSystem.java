@@ -4,24 +4,24 @@ import java.util.ArrayList;
 
 public class GrandingSystem {
 
-    private double approval = 0;
-    private double total = 0;
+    private double rovalApr = 0;
+    private double aumt = 0;
     private int regular = 0;
-    private String resultSM = "";
+    private String resultM = "";
     private String resultSS = "";
     private double bioSum = 0;
     private double geoSum = 0;
     private double matSum = 0;
 
     public double stack1(ArrayList<SchoolGrandingSystem> list) {
-            total = list.size();
+            aumt = list.size();
         for (SchoolGrandingSystem ob : list) {
             if (ob.getNote() >= 60.0) {
-                approval++;
+                rovalApr++;
             }
         }
 
-        return approval / total;
+        return rovalApr / aumt;
     }
 
     public int stack2(ArrayList<SchoolGrandingSystem> list) {
@@ -61,14 +61,14 @@ public class GrandingSystem {
         double prommat = matSum / countmat;
 
         if (prombio > promgeo && prombio > prommat) {
-            resultSM = snk.choiceAttributp(1.0);
+            resultM = snk.choiceAttributp(1.0);
         } else if (promgeo > prombio && promgeo > prommat) {
-            resultSM = snk.choiceAttributp(2.0);
+            resultM = snk.choiceAttributp(2.0);
         } else if (prommat > prombio && prommat > promgeo) {
-            resultSM = snk.choiceAttributp(3.0);
+            resultM = snk.choiceAttributp(3.0);
         }
 
-        return resultSM;
+        return resultM;
     }
 
     public String stack4(ArrayList<SchoolGrandingSystem> list) {
